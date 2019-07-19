@@ -52,19 +52,15 @@
   <script>
   Survey.Survey.cssType = "bootstrap";
 
-  var surveyJSON = {"title":"Getting to know you","description":"Let's learn a bit more about you...","completedHtml":"It's like we've been friends forever.👫","pages":[{"name":"page1","elements":[{"type":"text","name":"question1","title":"Hi! 👋🏽 What's your name?"}]},{"name":"page2","elements":[{"type":"rating","name":"question2","title":"How are you feeling today?","rateValues":[{"value":1,"text":"awful"},{"value":2,"text":"been better"},{"value":3,"text":"meh"},{"value":4,"text":"good"},{"value":5,"text":"superb"}]}]},{"name":"page3","elements":[{"type":"imagepicker","name":"question3","title":"Which is your spirit animal?","choices":[{"value":"lion","imageLink":"https://surveyjs.io/Content/Images/examples/image-picker/lion.jpg"},{"value":"giraffe","imageLink":"https://surveyjs.io/Content/Images/examples/image-picker/giraffe.jpg"},{"value":"panda","imageLink":"https://surveyjs.io/Content/Images/examples/image-picker/panda.jpg"},{"value":"camel","imageLink":"https://surveyjs.io/Content/Images/examples/image-picker/camel.jpg"}]}]}],"showProgressBar":"top","goNextPageAutomatic":true}
+  Survey.Survey.cssType = "bootstrap";
 
-  function sendDataToServer(survey) {
-      //send Ajax request to your web server.
-      alert("The results are:" + JSON.stringify(survey.data));
-  }
+  var surveyJSON = {"title":"Getting to know you","description":"Let's learn a bit more about you...","completedHtml":"It's like we've been friends forever.👫","pages":[{"name":"page1","elements":[{"type":"text","name":"question1","title":"Hi! 👋🏽 What's your name?"}]},{"name":"page2","elements":[{"type":"rating","name":"question2","title":"How are you feeling today?","rateValues":[{"value":1,"text":"awful"},{"value":2,"text":"been better"},{"value":3,"text":"meh"},{"value":4,"text":"good"},{"value":5,"text":"superb"}]}]},{"name":"page3","elements":[{"type":"imagepicker","name":"question3","title":"Which is your spirit animal?","choices":[{"value":"lion","imageLink":"https://surveyjs.io/Content/Images/examples/image-picker/lion.jpg"},{"value":"giraffe","imageLink":"https://surveyjs.io/Content/Images/examples/image-picker/giraffe.jpg"},{"value":"panda","imageLink":"https://surveyjs.io/Content/Images/examples/image-picker/panda.jpg"},{"value":"camel","imageLink":"https://surveyjs.io/Content/Images/examples/image-picker/camel.jpg"}]}]}],"showPrevButton":false,"showProgressBar":"top","goNextPageAutomatic":true}
 
   var survey = new Survey.Model(surveyJSON);
   $("#surveyContainer").Survey({
       model: survey,
       onComplete: sendDataToServer
-  });
-  </script>
+  });  </script>
 
 
 
